@@ -1,2 +1,4 @@
-# genshin twitter sentiment analysis
-repo for capstone 2023
+# twitter sentiment analysis pipeline
+
+input: handle, domain knowledge, performance metrics
+output: visualization of product sentiment against performance 
