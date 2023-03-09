@@ -5,6 +5,7 @@ from visualizer import visualize
 from sentimentanalysis import analyze_sentiment
 
 # runs the application 
+# --train for training model, --run for inference
 def run():
     # user input
     origin_handle, domain, performance = user_input()
