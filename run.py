@@ -4,7 +4,7 @@ from tweetcollector import collect_tweet
 from visualizer import visualize 
 from sentimentanalysis import analyze_sentiment
 
-
+# runs the application 
 def run():
     # user input
     origin_handle, domain, performance = user_input()
