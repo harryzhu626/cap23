@@ -6,19 +6,15 @@ from sentimentanalysis import analyze_sentiment
 
 # runs the application 
 # --train for training model, --run for inference
-def run():
-    # user input
-    origin_handle, domain, performance = user_input()
 
-    # if no domain is given, use origin_handle to extract domain
-    if not domain:
-        domain = extract_domain(origin_handle)
-    
-    # use origin and domain to collect tweets, and load into database 
-    collect_tweet(origin_handle, domain)
+# the pipeline has 3 concurrent parts: 
+#   1 scrape, insert to db 'tweets'
+#   2 pull from db 'tweets', perform sentiment analysis, insert to db 'sentiments' 
+#   3 pull from db 'sentiments', visualize
+# it's scalable, non-linear
 
-    # perform sentiment analysis on database tweets 
-    sentiment = analyze_sentiment()
+# two database: 
+#   'tweets': non-relational json database (mongodb) to store scapred tweets.
+#   'sentiments': relational database (sqlite) to store processed sentiments. 
 
-    # visualize sentiments against performance 
-    visualize(sentiment, performance)
+# streamlit can handle visualization 

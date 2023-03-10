@@ -8,13 +8,4 @@ def user_input():
         'product 3',
     ]
 
-    performance = { # company performance overtime, revenue, customer size, revenue per customer etc. 
-        '01/2023': 120,
-        '02/2023': 140,
-        '03/2023': 170, 
-    }
-
-    return origin_handle, domain_knowledge, performance
-
-if __name__ == '__main__':
-    origin_handle, domain_knowledge, performance = user_input()
+    return origin_handle, domain_knowledge

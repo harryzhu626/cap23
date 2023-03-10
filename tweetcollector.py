@@ -10,3 +10,6 @@
 def collect_tweet(origin, domain):
     
     raise NotImplementedError
+
+if __name__ == '__main__':
+    collect_tweet('genshinimpact', 'dehya')
