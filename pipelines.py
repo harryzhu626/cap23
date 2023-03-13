@@ -1,10 +1,8 @@
-from input import user_input
-from domain_extractor import extract_domain
-from tweetcollector import collect_tweet
-from visualizer import visualize 
-from sentimentanalysis import analyze_sentiment
+# from tweettodb import 
+# from dbtosatodb import
+# from dbtov import 
 
-# runs the application 
+# controls the 3 pipelines 
 # --train for training model, --run for inference
 
 # the pipeline has 3 concurrent parts: 
