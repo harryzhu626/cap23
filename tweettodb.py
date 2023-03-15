@@ -8,7 +8,7 @@ domain_list = [
     'jean',
     #'dehya', 
 ]
-todb = True
+todb = False
 
 date_start_year = 2022
 date_start_month = 1
