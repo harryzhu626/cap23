@@ -1,4 +1,4 @@
-from tweetcollector import collect_tweet, new_function
+from tweetcollector import collect_tweet
 from mongo import insert_tweets
 from dategenerator import create_dates
 
@@ -8,7 +8,7 @@ domain_list = [
     'jean',
     #'dehya', 
 ]
-todb = False
+todb = True
 
 date_start_year = 2022
 date_start_month = 1
@@ -22,7 +22,9 @@ date_example = 'until:2023-01-10', 'since:2021-01-01'
 
 if __name__ == '__main__':
     print('running')
-    tweets = new_function(origin_handle, domain_list, dates, todb=todb)
+    tweet_generator = collect_tweet(origin_handle, domain_list, dates, todb=todb)
+    for tweet in tweet_generator:
+        print(tweet)
     # tweets = collect_tweet(origin_handle, domain_list, dates, todb=todb)
-    print(type(tweets))
+    # print(type(tweets))
 #     insert_tweets()
