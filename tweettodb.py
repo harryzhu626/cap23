@@ -15,11 +15,11 @@ import itertools
 
 origin_handle = 'genshinimpact'
 domain_list = [
-    #'diluc',
-    #'jean',
+    'diluc',
+    'jean',
     'xinyan', 
 ]
-output_generator = False
+output_generator = True
 
 date_start_year = 2022
 date_start_month = 1
@@ -33,13 +33,12 @@ dates = create_dates(date_start_year, date_end_year,
                      date_start_month, date_end_month)
 
 
-if __name__ == '__main__':
+def tweettodb_main():
     if output_generator:
-        tweet_generators = collect_domains(origin_handle, domain_list, dates)
-        for generator in tweet_generators:
-            sliced_gen = itertools.islice(generator, top_k)
-            for item in sliced_gen:
-                print(f'{item}')
+        tweet_generators = collect_domains(origin_handle, domain_list, dates, top_k=top_k)
+        for generator in tweet_generators: # one generator for each entity in domain_list 
+            print(f'FLAG insert gen to db')
+            insert_tweets(generator)
     else:
         print(f'FLAG writing tweets to db')
         write_db(origin_handle, domain_list, dates, top_k) 

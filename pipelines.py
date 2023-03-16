@@ -1,4 +1,5 @@
-# from tweettodb import 
+from tweettodb import tweettodb_main
+from sentimentanalysis import retrieve_tweets
 # from dbtosatodb import
 # from dbtov import 
 
@@ -16,3 +17,16 @@
 #   'sentiments': relational database (sqlite) to store processed sentiments. 
 
 # streamlit can handle visualization 
+
+if __name__ == '__main__':
+    #tweettodb_main()
+    cursor = retrieve_tweets()
+    cursor_temp = cursor.clone()
+    print('cursor length', len(list(cursor_temp)))
+    print(cursor[0])
+    print(cursor[6]) 
+    print(cursor[1]) 
+    print(cursor[2]) 
+
+    
+    

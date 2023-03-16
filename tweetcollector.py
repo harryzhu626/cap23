@@ -4,6 +4,7 @@ import itertools
 import datetime 
 import os
 
+
 current_date = datetime.date.today()
 current_date_dir = f"{current_date}"
 parent_dir = os.getcwd()
@@ -12,13 +13,16 @@ if not os.path.exists(current_date_dir_path):
     os.makedirs(current_date_dir_path)
 print(f'directory path {current_date_dir_path}')
 
-def collect_domains(origin, domain_list, dates):
+
+def collect_domains(origin, domain_list, dates, top_k=1):
     print('FLAG collect_domains')
     generator_list = []
 
     for string in domain_list:
         sns_output = snscrape(origin, string, dates)
-        generator_list.append(return_generator(sns_output))
+        tweet_generator = return_generator(sns_output)
+        tweet_gen_topk = slice_generator(tweet_generator, top_k)
+        generator_list.append(tweet_gen_topk)
     return generator_list
             
 

@@ -28,7 +28,7 @@ def insert_tweets(tweets: Iterable) -> None:
     db_tweets = db['tweets_col']
     for i, tweet in enumerate(tweets):
         # add other key/value like 'user', 'date'
-        db_tweets.insert_one({'tweet_id': i, 'json': tweet}) 
+        db_tweets.insert_one({'tweet_id': i, 'json': tweet})
 
 
 def query_tweet(tweet_id: int) -> None:
@@ -43,3 +43,7 @@ def query_tweet(tweet_id: int) -> None:
     if len(list(cursor_temp)) > 0:
         return cursor
     return 
+
+
+def query_k(query_size):
+    return db['tweets_col'].find().limit(query_size)
