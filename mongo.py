@@ -1,3 +1,11 @@
+"""
+directory: cap23
+module: mongo.py
+author: harry z
+description: 
+this module 
+"""
+
 import pymongo 
 from typing import Iterable
 
