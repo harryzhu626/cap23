@@ -46,4 +46,9 @@ def query_tweet(tweet_id: int) -> None:
 
 
 def query_k(query_size):
+    # cursor = db['tweets_col'].find().limit(query_size)
+    # print('type cursor', type(cursor))
+    # clone = cursor.clone()
+    # print('len cursor', len(list(cursor)))
+    # clone = clone.limit(query_size)
     return db['tweets_col'].find().limit(query_size)
