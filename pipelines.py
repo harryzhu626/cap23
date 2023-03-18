@@ -1,5 +1,5 @@
 from tweettodb import tweettodb_main
-from sentimentanalysis import retrieve_tweets, analyze_sentiment
+from opinionminer import retrieve_tweets, extract_content
 # from dbtosatodb import
 # from dbtov import 
 
@@ -20,7 +20,8 @@ from sentimentanalysis import retrieve_tweets, analyze_sentiment
 
 if __name__ == '__main__':
     #tweettodb_main()
-    #cursor = retrieve_tweets()
-    sentence = ['this character design does not make any sense!','jean is the best character!']
-    print('sentence', sentence)
-    print(analyze_sentiment(sentence))
+    cursor = retrieve_tweets()
+    for item in cursor:
+        extract_content(item)
+    # sentence = ['this character design does not make any sense!','jean is the best character!']
+    # print(analyze_opinion(sentence))

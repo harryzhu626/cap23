@@ -31,6 +31,19 @@ def insert_tweets(tweets: Iterable) -> None:
         db_tweets.insert_one({'tweet_id': i, 'json': tweet})
 
 
+def insert_opinions(opinions: Iterable) -> None:
+    """
+    create a collection called 'opinions_col'
+    add a unique ascending index on the key 'opinion_id'
+    insert opinion jsons into the 'opinions_col' collection
+    :param tweets: opinion json iterator
+    :return: 
+    """
+    db_opinions = db['opinions_col']
+    for i, opinion in enumerate(opinions):
+        db_opinions.insert_one({'opinion_id': i, 'json': opinion})
+
+
 def query_tweet(tweet_id: int) -> None:
     """
     given a tweet id, retrieve the tweet json 
