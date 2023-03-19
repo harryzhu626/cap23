@@ -6,9 +6,6 @@ connection = sqlite3.connect("cap23")
 # cursor
 cursor = connection.cursor()
 
-# print statement will execute if there
-# are no errors
-print("Connected to the database")
 
 sql_command = """
 CREATE TABLE 
@@ -22,6 +19,5 @@ joining DATE
  
 # execute the statement
 cursor.execute(sql_command)
-
-# close the connection
+print('nice')
 connection.close()
