@@ -1,4 +1,4 @@
-# twitter sentiment analysis pipeline
+# twitter opinion mining pipeline
 
 input: handle, domain knowledge
-output: sentiment visualization overtime and over geographical locations
+output: opinion visualization overtime
