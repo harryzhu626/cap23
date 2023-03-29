@@ -2,4 +2,3 @@
 
 input: handle, domain knowledge
 output: opinion visualization overtime
-others: 
