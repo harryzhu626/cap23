@@ -2,7 +2,6 @@ from p1 import pipeline1
 from p2 import pipeline2
 # from p3 import pipeline3
 import praw 
-
 from keys.reddit_keys import reddit_agent, reddit_id, reddit_secret
 
 # create a read-only reddit instance，i.e. only access public information 
@@ -20,10 +19,10 @@ start_year = 2021
 end_year = 2022
 
 reddit_directory = '/data/reddit/'
-
-col_name = 'reddit_raw'
+collect_num = 2
+retrieve_num = 2
 sortby = 'new'
 
 if __name__ == "__main__":
-    pipeline1(col_name, stock_sub, sortby)
-    # pipeline2()
+    #pipeline1(stock_sub, sortby, collect_num)
+    pipeline2(retrieve_num)
