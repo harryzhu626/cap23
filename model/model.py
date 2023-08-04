@@ -1,12 +1,4 @@
 from transformers import pipeline 
+# # from nltk.sentiment.vader import SentimentIntensityAnalyzer as SIA
 
-pipe = pipeline('text-classification')
-
-def opinion_mine_single(submission_clean):
-    opinion = pipe(submission_clean)
-    return opinion
-
-
-def opinion_mine_multi(submissions_clean):
-    for submission in submissions_clean:
-        yield opinion_mine_single(submission)
+sa_pipe = pipeline('text-classification')

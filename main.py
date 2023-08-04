@@ -1,6 +1,4 @@
-from p1 import pipeline1
-from p2 import pipeline2
-# from p3 import pipeline3
+from pipelines import pipeline1, pipeline2
 import praw 
 from keys.reddit_keys import reddit_agent, reddit_id, reddit_secret
 
@@ -12,17 +10,18 @@ reddit = praw.Reddit(
 )
 
 # obtain a subreddit
-stock_sub = reddit.subreddit("StockMarket")
+subreddit = reddit.subreddit("movies")
+flair_text = 'Official Discussion'
 # stock market opinion on reddit vs stock price 
+
+reddit_directory = '/data/reddit/'
+collect_num = 2
+retrieve_num = 7
+sortby = 'hot' # submission types: controversial, gilded, hot, new, rising, top 
 
 start_year = 2021
 end_year = 2022
 
-reddit_directory = '/data/reddit/'
-collect_num = 2
-retrieve_num = 2
-sortby = 'new'
-
 if __name__ == "__main__":
-    #pipeline1(stock_sub, sortby, collect_num)
+    # pipeline1(subreddit, flair_text, collect_num)
     pipeline2(retrieve_num)

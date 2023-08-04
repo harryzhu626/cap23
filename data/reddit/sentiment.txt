@@ -1,0 +1,139 @@
+No model was supplied, defaulted to distilbert-base-uncased-finetuned-sst-2-english and revision af0f99b (https://huggingface.co/distilbert-base-uncased-finetuned-sst-2-english).
+Using a pipeline without specifying a model name and revision in production is not recommended.
+comment_raw: “Maybe they were talking about something more… important”
+
+What a great “go fuck yourself” moment. All the self-importance just gone. RDJ killed it in this role, sentiment: [{'label': 'NEGATIVE', 'score': 0.9997640252113342}]
+comment_raw: “I’m not in charge of contraceptives”
+“I can see that”
+
+Had me cracking up, sentiment: [{'label': 'NEGATIVE', 'score': 0.9905727505683899}]
+comment_raw: Academy award "Best Actor" winners Casey Affleck, Gary Oldman and Remi Malek have total screen time of about 5 minutes., sentiment: [{'label': 'POSITIVE', 'score': 0.8293554782867432}]
+comment_raw: I liked Kitty’s line of “you don’t get to sin and make everyone feel sorry for you.” After he found out Tatlock died, sentiment: [{'label': 'POSITIVE', 'score': 0.9978454113006592}]
+comment_raw: Normal people during sex: Oh yeah oh baby
+
+Nerds during sex: I am become Death, the destroyer of worlds, sentiment: [{'label': 'NEGATIVE', 'score': 0.9804373383522034}]
+comment_raw: Emily Blunt’s character answering questions from Roger Robb and not falling for any of his bullshit was a great scene., sentiment: [{'label': 'POSITIVE', 'score': 0.988549530506134}]
+comment_raw: "I believe we did"
+
+Those final shots just made my heart sink. Even knowing the history I wasn't prepared to be so emotionally drained after this., sentiment: [{'label': 'NEGATIVE', 'score': 0.9984629154205322}]
+comment_raw: Casey Affleck was terrifying in the small screen time we saw him.
+
+Got Sociopathic CIA vibes from his character, sentiment: [{'label': 'NEGATIVE', 'score': 0.9917193651199341}]
+comment_raw: I believe we did. 💀, sentiment: [{'label': 'POSITIVE', 'score': 0.9963911175727844}]
+comment_raw: Why did Nolan tease JFK like the joker card from Batman Begins, sentiment: [{'label': 'NEGATIVE', 'score': 0.9859354496002197}]
+comment_raw: Haven’t seen anyone talk about Matt Damon yet…I think he did an incredible job, sentiment: [{'label': 'POSITIVE', 'score': 0.9997292160987854}]
+comment_raw: “Do you want them to tar and feather you in the hopes they’ll forgive you for what you’ve done?”
+
+Emily Blunt delivering the most scathing condemnation of Oppenheimer’s character and actions was so fucking powerful. Mix that in with her portrayal of postpartum depression, a mother and wife resigned to be nothing but a caretaker in the shadow of an ego driven, neurotic, anxiety filled genius and then a powerhouse fighter in the hearing, I think she was a real highlight for me. 
+
+The film was way more humanising of Oppenheimer then I was thinking it’d be but also so much more damning of him than I’d ever thought it would be., sentiment: [{'label': 'POSITIVE', 'score': 0.993239164352417}]
+comment_raw: That scene after the bombs have been dropped and Oppenheimer is addressing that classroom of people was one of the most haunting things I’ve seen. The way the background shook, and the flash burned the audience, mixed with the silence was something else., sentiment: [{'label': 'POSITIVE', 'score': 0.9425966739654541}]
+comment_raw: It’s hilarious that the nude scene that everybody made so much out of even included the Destroyer of Worlds Bhagavad Gita quote., sentiment: [{'label': 'POSITIVE', 'score': 0.9997020363807678}]
+comment_raw: I love the use of ripples on water to represent nuclear bombings like how they have drawn the blast radiuses on the map. In the end, during Einstein and Oppenheimer's encounter, it was drizzling, and endless ripples formed on the lake., sentiment: [{'label': 'POSITIVE', 'score': 0.9970110654830933}]
+comment_raw: Question about the scene where >! A character drowns themselves in a bathtub, was there certain shots in this sequence that showed another pair of hands drowning them ? IE implying it could’ve been murder ? !< 
+
+Anyway, enjoyed the film, reminded me a lot of Oliver Stones ‘Nixon’ that I love.. it’s missing Stones sense of paranoia though, sentiment: [{'label': 'POSITIVE', 'score': 0.9650964736938477}]
+comment_raw: The last scene with Oppenheimer and Einstein made my stomach launch into my throat, sentiment: [{'label': 'NEGATIVE', 'score': 0.8929009437561035}]
+comment_raw: My man Gödel talking about the structure of trees while everybody's trying to blow the world up was my favourite part of the film., sentiment: [{'label': 'POSITIVE', 'score': 0.9966122508049011}]
+comment_raw: The ending scene tying back into the raindrops hit me so damn hard. Good job Nolan you are the man, never stop making movies., sentiment: [{'label': 'POSITIVE', 'score': 0.9955160021781921}]
+comment_raw: The feeling in my theater was palpable after the Trinity Test was successful and everyone on the ground was cheering its success. I don’t know how to describe it but it was kind of out of body to see almost a time capsule of people from 80 years ago celebrating the creation of something that could be the death of myself or my children in the future. Really chilling scene., sentiment: [{'label': 'POSITIVE', 'score': 0.9983538389205933}]
+comment_raw: The biggest thing for me was, just how impactful the first explosion was to the people that were there doing the testing.
+
+They weren’t just creating another bomb, but something terrifying, world ending stuff. 
+
+Nolan really gets that across to the audience. Impactful stuff.
+
+But the size of the explosion threw me off. Because you see stuff [like this](https://youtu.be/NofLHhxHwYk) and the close up shots of the buildings being destroyed, [like this](https://youtu.be/DXg2P9dx-GM).
+
+
+But to realize a nuclear explosion is just [this](https://youtu.be/8PJEpeU00eU) when viewed from afar, I can now totally see the scale Nolan was going for. It never really occurred to me just how almost simple the explosion could be portrayed, I never put a lot of thought into it. But it’s still so horrifying in its destructiveness., sentiment: [{'label': 'NEGATIVE', 'score': 0.9352366328239441}]
+comment_raw: “Maybe they weren’t talking about you at all… maybe something, more important” leading up to the final scene was a great line. The wince from Downey as the door opens and he’s hit with the sound of the reporters waiting to tear him down further., sentiment: [{'label': 'NEGATIVE', 'score': 0.9897280335426331}]
+comment_raw: Didn't know Josh Peck was going to be in it, that was a funny and pleasant surprise, sentiment: [{'label': 'POSITIVE', 'score': 0.99969482421875}]
+comment_raw: My brother said that Gary Oldman just needs to play Stalin now and he’ll have played all three world leaders who were at Potsdam. 
+
+Nolan seriously pulled every string possible for casting in this. It’s amazing how he knew how all of the people he’s worked with before in their secondary roles would be able to fit together into the puzzle, but that’s part of what makes his films enjoyable. David Krumholtz’s physical transformation caught me off guard, and Rami Malek having no lines until the (verbal) bomb drops at the end was outstanding., sentiment: [{'label': 'POSITIVE', 'score': 0.9997348189353943}]
+comment_raw: Emily Blunt's character where it looks like she's starting to break down and the sudden 180 during the questioning was amazing. Standing her ground and not falling for bait questions., sentiment: [{'label': 'POSITIVE', 'score': 0.9989091157913208}]
+comment_raw: The dead silence in the theater during the trinity explosion. Something I’ll never forget experiencing in a full theater., sentiment: [{'label': 'NEGATIVE', 'score': 0.9020206332206726}]
+comment_raw: They played the trailer to The Exorcist Believer before this movie 🤣, sentiment: [{'label': 'NEGATIVE', 'score': 0.9894291758537292}]
+comment_raw: Christopher Nolan has perfectly encapsulated what anxiety can feel like. Claustrophobic, loud, and unrelenting., sentiment: [{'label': 'POSITIVE', 'score': 0.9990612864494324}]
+comment_raw: The way my sphincter exploded like the bomb when the audio cuts back in during the gymnasium applause., sentiment: [{'label': 'NEGATIVE', 'score': 0.9923444390296936}]
+comment_raw: Some guy in front of me went for a bathroom break with 15 minutes left. He sat there for 2h45m but just couldn’t make it. Brutal timing lol, sentiment: [{'label': 'NEGATIVE', 'score': 0.9996606111526489}]
+comment_raw: Ludwig Göransson might be approaching a Hans Zimmer level of film composer. The way he orchestrated the score adds so much to the tension and anxiety of the movie. Hopefully he picks up the Oscar, sentiment: [{'label': 'POSITIVE', 'score': 0.9988425970077515}]
+comment_raw: Florence Pugh showed up and got naked, then killed herself. That scene where Oppie’s wife is imagining Pugh just riding her husband, that was something I never thought I’d see in a Nolan film. It was almost Ari Aster like., sentiment: [{'label': 'NEGATIVE', 'score': 0.9148015975952148}]
+comment_raw: Anyone else catch the black gloved hand in the corner of the frame during the tatlock “suicide” scene? In the Bird/Sherwon book there is a suggestion that she was murdered. I thought this was an interesting way of visualizing the ambiguous circumstances of her death., sentiment: [{'label': 'NEGATIVE', 'score': 0.9807273149490356}]
+comment_raw: The scene after the bomb goes off and he’s addressing the crowd will haunt me for some time, I can’t remember feeling so uncomfortable in a theatre. I can’t wait to see it again, absolutely incredible spectacle from start to finish, sentiment: [{'label': 'POSITIVE', 'score': 0.99897301197052}]
+comment_raw: I love how Nolan played with the differences between the speed of light and sound during the Trinity Test. To convey an awe-inspiring visual spectacle only to be engulfed by the force/sound of it. 
+
+The atomic bomb was a marvelous scientific achievement but then the magnitude of this creation and the harm it will cause literally hits you like a freight train. 
+
+My whole theater was completely silent. It was awesome to be a part of., sentiment: [{'label': 'POSITIVE', 'score': 0.9929643869400024}]
+comment_raw: Like many people the ending to this movie is absolutely incredible! Ending with Einstein & Oppenheimer was genius and it gave me literal chills! Nolan’s best in years, sentiment: [{'label': 'POSITIVE', 'score': 0.9998806715011597}]
+comment_raw: Strauss and Oppenheimer both being served career implosions at the same exact time to represent mutually assured destruction was genius., sentiment: [{'label': 'POSITIVE', 'score': 0.9980542659759521}]
+comment_raw: I'm just gonna say that the bowls on the table filling up with marbles might be low-key one of my favorite plot devices. 
+
+Most films would give some stupid exposition, try and explain something really fucking complex like bending a piece of paper and poking a hole through it or something. 
+
+Not this film. Nolan just shows marbles filling in some bowls and keeps the film focused on what fucking matters. Brilliant., sentiment: [{'label': 'POSITIVE', 'score': 0.8820264935493469}]
+comment_raw: It’s funny to think that the whole barbenheimmer trend is going to convince more than one casual film goer to see a three hour dialogue heavy biopic. It’s very good, Cillian Murphy is phenomenal, RDJ kinda hijacks in the third act but that’s alright I like him too, love Gary oldman’s new schtick of “I’m going to cover myself in some much rubber that even my mama won’t recognize me”, sentiment: [{'label': 'POSITIVE', 'score': 0.99924635887146}]
+comment_raw: He always answered because there was no caller ID back then., sentiment: [{'label': 'NEGATIVE', 'score': 0.9654378890991211}]
+comment_raw: That little mention of JFK voting against Strauss got a good chuckle out of me, sentiment: [{'label': 'POSITIVE', 'score': 0.9968776702880859}]
+comment_raw: Oppenheimer: I’m so conflicted about my creation. Ah and angst of genius!
+
+Teller: you know this is just the fuse for a bigger bomb I wanted to make, sentiment: [{'label': 'NEGATIVE', 'score': 0.9958088397979736}]
+comment_raw: Ends with American Prometheus realizing the full scope of what still may come to pass.
+
+This movie was fantastic. RDJ gave one hell of a fucking performance in the final act of the movie. As did everyone, regardless of their screen time throughout. Cillian Murphy conveyed so much through his role id be surprised if he didn't win best actor. Emily Blunt gave one hell of a performance and the shot of her reliving her husband's infidelity during the clearance interview was artistically beautiful. A great "show, don't tell" moment.
+
+The fact that the pace starts and never really never let's up, but has moments of built tension that doesn't release, and moves on to save for later, makes it feel like it also never speeds up either. Its a marathon, but its paced so well its like you were trained for that marathon. My body felt the three hour run time, but my mind didn't. 
+
+The ending was also beautiful shot, from almost every aspect. RDJ slowly making his way towards Oppenheimer and Einstein, to the content of that teased conversation, to the way it ended., sentiment: [{'label': 'POSITIVE', 'score': 0.9984912872314453}]
+comment_raw: The scene where Strauss is told something along the lines of "Maybe they were talking about more IMPORTANT things" had me grinning ear to ear. Oh my god, sentiment: [{'label': 'POSITIVE', 'score': 0.9985848665237427}]
+comment_raw: I was genuinely surprised when I saw Rami Malek. Didn't know he was here., sentiment: [{'label': 'POSITIVE', 'score': 0.9902864098548889}]
+comment_raw: I fucking loved this movie. So much tragedy in this movie. Love Emily Blunts line that went something like just because you sin don't expect the world to feel sorry for you. Of course all the conversations with Einstein were great. 
+Loved RDJ in the third act
+Pacing and editing is so great.
+I held my piss in the whole time.
+Cillian Murphy and Emily Blunt need Oscar nods IMO.
+Nolan did it again, sentiment: [{'label': 'POSITIVE', 'score': 0.9995777010917664}]
+comment_raw: I don’t think it can be understated how powerful that last scene between Einstein and Oppenheimer was. I was already blown away by the film but that scene will haunt me for the rest of my life. 10/10., sentiment: [{'label': 'POSITIVE', 'score': 0.9904575347900391}]
+comment_raw: A film that feels like an enormous pop culture event while simultaneously being a 3 hour, dialogue heavy character study that extensively uses black and white photography. Watching such a film on a massive screen with a sold out crowd is honestly quite unbelievable. In this day in age we almost exclusively expect this for comic book movies and not much else. That thought alone genuinely brought me to the verge of tears multiple times. We just don’t get moments like this very often. Thankfully Oppenheimer is worthy of the moment., sentiment: [{'label': 'POSITIVE', 'score': 0.6798367500305176}]
+comment_raw: The thing that makes this movie incredible is I don't even know where to start with it. Albert Einstein is in just a few scenes and on film for what 5 minutes and the portrayal is amazing and wonderful and heartwarming. There's not a single bad performance in the movie. 
+
+Oldman as Truman is awesome and bold because all Nolan does is portray Truman as he was. If you know history you know Truman is a good man/president and yet he comes off as a total asshole. It's remarkable. 
+
+Downey and Murphy are 10/10. But so are so many others. Blunt is superb. Branaugh is in 2 scenes basically and he's effing incredible. 
+
+The question of if we are doomed is so dark but powerful. And the way the movie used oppenheimer's imagination as surrealism and connects it back to him looking at art is...whew. it's just an awesome, awesome piece of art (the movie I mean). 
+
+I'm a history teacher and I try to convey to students how big a deal the bomb is. It really is a break with the rest of our history as a species and arguably the most important thing we've ever done. It will either destroy us or send us total the stars. This movie summed up all my efforts at teaching this subject and then some., sentiment: [{'label': 'POSITIVE', 'score': 0.9997395873069763}]
+comment_raw: Cillian Murphy's haunting look at several key points of the film is just amazing. That final conversation with Einstein, his stare is immense and powerful, sentiment: [{'label': 'POSITIVE', 'score': 0.9998718500137329}]
+comment_raw: The last 30 minutes could be its own movie lol, Oppenheimer getting slammed from everyone, sentiment: [{'label': 'NEGATIVE', 'score': 0.9993983507156372}]
+comment_raw: Here are my main takeaways:
+- There were a lot of generationally smart people on earth at the same time. Several names I recognized from textbooks that I didn’t realize knew each other and worked together. It could be because I’m not actively studying scientific journals, but it seems like we don’t have as many Einsteins, Bohrs, and Oppenheimers these days. 
+- The movie had way more political undertones than I was expecting. Really highlighted that some of the madness we see in politics has existed for centuries., sentiment: [{'label': 'POSITIVE', 'score': 0.9947748184204102}]
+comment_raw: No, Strauss, you’re not important enough to be discussed by Oppenheimer and Einstein., sentiment: [{'label': 'NEGATIVE', 'score': 0.9995951056480408}]
+comment_raw: Our 70mm showing stopped working 2.5 hours into the film! A light bulb or something broke. We had a little 10 min intermission, and got free tickets bc of it! Overall one of Nolan's best films., sentiment: [{'label': 'POSITIVE', 'score': 0.9990704655647278}]
+comment_raw: Had to cancel my tickets for Barbie after, this was intense, sentiment: [{'label': 'NEGATIVE', 'score': 0.9932160973548889}]
+comment_raw: The scene in the gym after hearing of the bombs dropping and everyone applauding Oppy was amazing., sentiment: [{'label': 'POSITIVE', 'score': 0.9998422861099243}]
+comment_raw: Everyone acted their asses off in this movie but I will continue to think about Emily Blunt and RDJ's performances. Simply amazing.
+
+Did anyone catch who played Truman? I think it was some nobody who's never been in a movie before..., sentiment: [{'label': 'POSITIVE', 'score': 0.9997199177742004}]
+comment_raw: I watched the movie, I felt like this is the best Christopher Nolan movies in years, it felt massive with so many actors in here and yet felt intimate because, this movie peeled the layer of Oppenheimer that we've never seen before on big screen, Cillian Murphy stepped in to a lead role and he executed that so precisely, RDJ also gave memorable performance as Strauss, the antagonist for Oppenheimer.
+
+I also felt like Nolan is firing on all cylinders in here, camera works, sound designs, score, script were all top notch., sentiment: [{'label': 'POSITIVE', 'score': 0.9996740818023682}]
+comment_raw: For a 3 hour heavy dialogue film to have this type of speed to it is incredible. Honestly it was hard to distinguish where scenes began and ended with it's editing and pacing. It just did not stop and I loved it. It cuts to a single shot for a split second, then back to the scene, then forward to another, then backwards again while in colour for a first person perspective then to a black and white objective perspective with the music swelling along while all being coherent., sentiment: [{'label': 'POSITIVE', 'score': 0.99954754114151}]
+comment_raw: During the scene with the bomb, I couldn't help but think how funny it would be if something went wrong and Josh Peck was forced to push the red button... Look up with a thousand yard stare and say... "Megan...", sentiment: [{'label': 'NEGATIVE', 'score': 0.9512012004852295}]
+comment_raw: - Arguably one of Nolan’s tightest scripts. It felt concise for what it was trying to do, and has hardly any filler scenes. 
+
+- RDJ was incredible. I liked how he was kind of Tony Stark-ish at first, and then he becomes more and more unlikable as it goes on. He’s the front runner for Supporting Actor this year, for sure.
+
+- Matt Damon was an unsung highlight. He was hilarious, and always gave great line deliveries.
+
+- Gary Oldman as Truman was a great cameo. He was such a prick in only 2 minutes of screen time.
+
+- The Trinity Test scene was absolutely breathtaking. The tension, followed by the silence, followed by the sound was thrilling to experience.
+
+- Holy shit, that scene with Oppenheimer giving the speech in the gym and he hallucinates the bomb going off on the crowd. Genuinely one of the most haunting scenes I’ve ever seen.
+
+- The score was fantastic, Ludwig deserves a ton of credit for building up the intensity with his score., sentiment: [{'label': 'POSITIVE', 'score': 0.9988436698913574}]
+Token indices sequence length is longer than the specified maximum sequence length for this model (868 > 512). Running this sequence through the model will result in indexing errors

@@ -1,14 +1,24 @@
+import praw
+import pprint
+from datetime import datetime
+
 def comment_cleanup(comments):
 
     comment_list = []
     for comment in comments:
-        comment_clean = {
-            'body': comment.body, 
-            'score': comment.score, 
-            'permalink': comment.permalink, 
-            'author': comment.author.name
-        }
-        comment_list.append(comment_clean)
+        
+        # only append top level comments, ignore MoreComments trees
+        if isinstance(comment, praw.models.reddit.comment.Comment):
+            date_d = datetime.fromtimestamp(comment.created_utc).strftime("%A, %B %d, %Y %I:%M:%S")
+            comment_clean = {
+                'body': comment.body,
+                'score': comment.score,
+                'date': date_d,
+                'permalink': comment.permalink,
+                # deleted users will be Nonetype 
+                'author': None if comment.author == None else comment.author.name,
+            }
+            comment_list.append(comment_clean)
     
     return comment_list
 
@@ -21,15 +31,16 @@ def submission_cleanup(submission):
     """
     submission_clean = {
         'retrieved': False, 
-        'title': submission.title, 
+        'title': submission.title.lower(), 
         'text': submission.selftext, 
+        'flair': submission.link_flair_text, 
         'score': submission.score, 
         'upvote_ratio': submission.upvote_ratio, 
         'num_comments': submission.num_comments, 
         'permalink': 'reddit.com'+submission.permalink, 
-        'author': {'name': submission.author.name, 'karma': 0}, 
+        'author': None if submission.author == None else submission.author.name, 
         'comments': comment_cleanup(submission.comments.list()), 
-        #'top_comments': comment_cleanup(list(submission.comments))
+        # comment_timestamp add
     }
     
     return submission_clean 
