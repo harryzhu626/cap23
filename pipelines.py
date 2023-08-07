@@ -17,7 +17,6 @@ def pipeline1(
 
 
 from db.mongodb import mongo_query_k
-from db.sqlite import sql_multi_insert
 from opinionmine import opinion_mine_subs
 
 def pipeline2(
@@ -30,24 +29,20 @@ def pipeline2(
     retrieve_num: number of clean submissions to retrieve
     """
     retrieved_subs = mongo_query_k(retrieve_num)
-    subs_opinions_infos = opinion_mine_subs(retrieved_subs)
-    sql_multi_insert(subs_opinions_infos)
+    opinion_mine_subs(retrieved_subs)
+    
 
-from db.sqlite import sql_query_k
+from db.sqlite_new import sql_query_k
 import pprint 
 
 def pipeline3(
-        submission: str,
+        table_name: str,
+        columns: str, 
+        query_size: int, 
     ):
-    """ 
+    """ Visualization 
     
     """
-    sql_output = sql_query_k(k)
+    sql_output = sql_query_k(columns, table_name, query_size)
     for item in sql_output:
         pprint.pprint(item)
-
-
-# def pipeline4():
-#     """ Visualization 
-    
-#     """

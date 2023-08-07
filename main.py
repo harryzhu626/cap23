@@ -1,4 +1,4 @@
-from pipelines import pipeline1, pipeline2
+from pipelines import pipeline1, pipeline2, pipeline3
 import praw 
 from keys.reddit_keys import reddit_agent, reddit_id, reddit_secret
 
@@ -16,12 +16,14 @@ flair_text = 'Official Discussion'
 
 reddit_directory = '/data/reddit/'
 collect_num = 2
-retrieve_num = 7
+retrieve_num = 2
 sortby = 'hot' # submission types: controversial, gilded, hot, new, rising, top 
 
-start_year = 2021
-end_year = 2022
+table_name = 'sentences'
+columns = 'comment_id, content, opinion, aspect'
+query_size = 5
 
 if __name__ == "__main__":
     # pipeline1(subreddit, flair_text, collect_num)
-    pipeline2(retrieve_num)
+    # pipeline2(retrieve_num)
+    pipeline3(columns=columns, table_name=table_name, query_size=query_size)

@@ -1,5 +1,9 @@
 from model.model import sa_pipe
 from typing import Dict, List, Tuple
+from db.sqlite_new import sql_insert
+import sqlite3
+from nltk.tokenize import sent_tokenize 
+from helper.tokenizer import split_into_sentences
 
 def sentiment_analyze(
         text: str
@@ -19,9 +23,10 @@ def comment_to_sentences(comment: str):
     Arguments:
     comment: the comment string
     """
-    comment_sentences = comment['body'].split('.')
-    comment_sentences = '\n'.join(comment_sentences).split('\n')
-    return comment_sentences
+    # comment_sentences = comment['body'].lower().split('.')
+    # comment_sentences = '\n'.join(comment_sentences).split('\n')
+    # return comment_sentences
+    return sent_tokenize(comment)
 
 def submission_to_opinion(
         submission_clean: Dict[str, str]
@@ -51,18 +56,30 @@ def submission_to_opinion(
             # sub_opinions_infos.append(appendage)
             yield appendage
 
-    # return sub_opinions_infos
+def sub_to_opinion_to_sql(
+        submission_clean: Dict[str, str]
+    ):
+    """ opinion mine on comments and insert to sqlite db 
+    """
+    # comments = submission_clean['document']['comments']
+    # sub_opinions_infos = []
+    sub = submission_clean['document']
+    comments = sub['comments']
+
+    movie_info = ([sub['title'], sub['score'], sub['permalink']])
+    comment_infos = []
+
+    for comment in comments:
+        comment_sentences = split_into_sentences(comment['body'])
+
+        sentence_holder = [(sentence, sentiment_analyze(sentence)[0]['label'], 'none') for sentence in comment_sentences]
+        comment_infos.append(([comment['body'], comment['score'], comment['date'], 'reddit.com'+comment['permalink']], sentence_holder))
+
+    sql_insert(movie_info, comment_infos)
 
 
-def opinion_mine_sub(
-        submission_clean: Tuple
-    ) -> None:
-    return submission_to_opinion(submission_clean)
-
-    
 def opinion_mine_subs(
         submissions_clean
     ) -> None:
-    return [opinion_mine_sub(submission) for submission in submissions_clean]
-    # for submission in submissions_clean:
-    #     yield opinion_mine_sub(submission)
+    for submission in submissions_clean:
+        sub_to_opinion_to_sql(submission)

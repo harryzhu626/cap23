@@ -18,7 +18,7 @@ sql_create_table = '''
     submission_upvote INTEGER
     )
 '''
- 
+
 # execute the statement
 cursor.execute(sql_create_table)
 connection.commit()
