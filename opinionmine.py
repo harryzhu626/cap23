@@ -1,7 +1,6 @@
 from model.model import sa_pipe
 from typing import Dict, List, Tuple
 from db.sqlite_new import sql_insert
-import sqlite3
 from nltk.tokenize import sent_tokenize 
 from helper.tokenizer import split_into_sentences
 
@@ -18,8 +17,6 @@ def sentiment_analyze(
 
 def comment_to_sentences(comment: str):
     """Break a comment string into individual sentences. 
-    
-    TODO: get rid of empty strings
     Arguments:
     comment: the comment string
     """

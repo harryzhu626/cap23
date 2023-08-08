@@ -41,3 +41,23 @@ def mongo_multi_insert(documents: Iterable) -> None:
 
 def mongo_query_k(query_size_k):
     return db_reddit_clean.find().limit(query_size_k)
+
+
+def mongo_remove():
+
+    # query = {"title": {"$regex": "megathread", "$options": "i"}}  # Case-insensitive search
+    last_30_entries = db_reddit_clean.find().sort([("_id", -1)]).limit(30)
+
+    # Delete matching entries from the last 30 entries
+    deleted_count = 0
+    for entry in last_30_entries:
+        print('title: ', entry['document']['title'])
+        if "megathread" in entry['document']["title"]:
+            db_reddit_clean.delete_one({"_id": entry["_id"]})
+            deleted_count += 1
+
+    # result = db_reddit_clean.delete_many(query)
+    # print(f"Deleted {result.deleted_count} documents with 'megathread' in the title.")
+    print(f"Deleted {deleted_count} documents with 'megathread' in the title from the last 30 entries.")
+
+    client.close()

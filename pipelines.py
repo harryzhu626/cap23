@@ -1,4 +1,4 @@
-from db.mongodb import mongo_multi_insert
+from db.mongodb import mongo_multi_insert, mongo_remove
 from reddit import subreddit_flaired_retrieve_k
 
 def pipeline1(
@@ -14,6 +14,7 @@ def pipeline1(
     """
     submission_iterator = subreddit_flaired_retrieve_k(subreddit, flair, collect_num)
     mongo_multi_insert(submission_iterator)
+    mongo_remove()
 
 
 from db.mongodb import mongo_query_k
@@ -32,17 +33,15 @@ def pipeline2(
     opinion_mine_subs(retrieved_subs)
     
 
-from db.sqlite_new import sql_query_k
-import pprint 
+from db.sqlite_new import sql_query_join
+from visualize import congregate_data, visualize_for_date
 
 def pipeline3(
-        table_name: str,
-        columns: str, 
-        query_size: int, 
+        movie_name: str, 
     ):
     """ Visualization 
     
     """
-    sql_output = sql_query_k(columns, table_name, query_size)
-    for item in sql_output:
-        pprint.pprint(item)
+    sql_output = sql_query_join(movie_name=movie_name)
+    opinions = congregate_data(sql_output)
+    visualize_for_date(opinions)

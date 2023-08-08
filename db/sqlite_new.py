@@ -75,17 +75,15 @@ def insert_comment(cursor, comments, movie_id):
         for sentence in sentences:
             cursor.execute(insert_query_sentence, (comment_id, sentence[0], sentence[1], sentence[2]))
             sentence_id = cursor.lastrowid
-            print(movie_id, comment_id, sentence_id)
+            print('movie id, comment id, sentence id', movie_id, comment_id, sentence_id)
 
 def sql_insert(movie, comments):
-    print(f'sql insert')
     connection_insert = sqlite3.connect('cap23')
     cursor = connection_insert.cursor()
 
     cursor.execute(insert_query_movie, movie)
     movie_id = cursor.lastrowid
         
-    print(f'last row id: {movie_id}')
     insert_comment(cursor, comments, movie_id)
 
     connection_insert.commit()
@@ -99,8 +97,31 @@ def sql_query_k(columns, table_name, query_size_k):
     cursor = connection_q.cursor()
 
     query_string = f"SELECT {columns} FROM {table_name} LIMIT {query_size_k};"
-    print('query string', query_string)
     cursor.execute(query_string)
+    results = cursor.fetchall()
+    cursor.close()
+    connection_q.close()
+    return results
+
+def sql_query_join(movie_name):
+    connection_q = sqlite3.connect('cap23')
+    cursor = connection_q.cursor()
+
+    # query_join_string = """
+    #     SELECT sentences.opinion, comments.date
+    #     FROM sentences
+    #     INNER JOIN comments ON sentences.comment_id = comments.rowid;
+    # """
+
+    query_join_string = f"""
+        SELECT sentences.opinion, comments.date
+        FROM sentences
+        INNER JOIN comments ON sentences.comment_id = comments.rowid
+        INNER JOIN movies ON comments.movie_id = movies.rowid
+        WHERE movies.title = '{movie_name}';
+    """
+    
+    cursor.execute(query_join_string)
     results = cursor.fetchall()
     cursor.close()
     connection_q.close()
