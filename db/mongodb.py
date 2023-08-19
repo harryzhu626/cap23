@@ -14,7 +14,7 @@ client = pymongo.MongoClient(
 db = client['cap_db']
 
 # db_reddit_raw = db['reddit_raw']
-db_reddit_clean = db['reddit_clean']
+db_reddit_clean = db['reddit']
 
 # raw_id = 0      # keeps track of number of raw documents stored in db_reddit_raw
 clean_id = 0    # keeps track of number of clean documents stored in db_reddit_clean 

@@ -31,17 +31,3 @@ def pipeline2(
     """
     retrieved_subs = mongo_query_k(retrieve_num)
     opinion_mine_subs(retrieved_subs)
-    
-
-from db.sqlite_new import sql_query_join
-from visualize import congregate_data, visualize_for_date
-
-def pipeline3(
-        movie_name: str, 
-    ):
-    """ Visualization 
-    
-    """
-    sql_output = sql_query_join(movie_name=movie_name)
-    opinions = congregate_data(sql_output)
-    visualize_for_date(opinions)

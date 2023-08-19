@@ -1,7 +1,6 @@
 import sqlite3
-from typing import Iterable
 
-connection = sqlite3.connect('cap23')
+connection = sqlite3.connect('cap')
 cursor = connection.cursor()
 
 """
@@ -66,16 +65,14 @@ cursor.execute(submission_schema)
 cursor.execute(comment_schema)
 cursor.execute(sentence_schema)
 
-# connection.commit()
-
 def insert_comment(cursor, comments, movie_id):
+    print('movie id: ', movie_id)
     for comment, sentences in comments:
         cursor.execute(insert_query_comment, (movie_id, comment[0], comment[1], comment[2], comment[3]))
         comment_id = cursor.lastrowid
         for sentence in sentences:
             cursor.execute(insert_query_sentence, (comment_id, sentence[0], sentence[1], sentence[2]))
-            sentence_id = cursor.lastrowid
-            print('movie id, comment id, sentence id', movie_id, comment_id, sentence_id)
+
 
 def sql_insert(movie, comments):
     connection_insert = sqlite3.connect('cap23')
@@ -103,15 +100,22 @@ def sql_query_k(columns, table_name, query_size_k):
     connection_q.close()
     return results
 
+
+def sql_query_entities():
+    connection_q = sqlite3.connect('cap23')
+    cursor = connection_q.cursor()
+    query_entities = """
+        SELECT title 
+        FROM movies; 
+    """
+    cursor.execute(query_entities)
+    results = cursor.fetchall()
+    return results
+
+
 def sql_query_join(movie_name):
     connection_q = sqlite3.connect('cap23')
     cursor = connection_q.cursor()
-
-    # query_join_string = """
-    #     SELECT sentences.opinion, comments.date
-    #     FROM sentences
-    #     INNER JOIN comments ON sentences.comment_id = comments.rowid;
-    # """
 
     query_join_string = f"""
         SELECT sentences.opinion, comments.date

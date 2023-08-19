@@ -1,7 +1,6 @@
 from model.model import sa_pipe
-from typing import Dict, List, Tuple
+from typing import Dict
 from db.sqlite_new import sql_insert
-from nltk.tokenize import sent_tokenize 
 from helper.tokenizer import split_into_sentences
 
 def sentiment_analyze(
@@ -14,16 +13,6 @@ def sentiment_analyze(
     """
     return sa_pipe(text)
 
-
-def comment_to_sentences(comment: str):
-    """Break a comment string into individual sentences. 
-    Arguments:
-    comment: the comment string
-    """
-    # comment_sentences = comment['body'].lower().split('.')
-    # comment_sentences = '\n'.join(comment_sentences).split('\n')
-    # return comment_sentences
-    return sent_tokenize(comment)
 
 def submission_to_opinion(
         submission_clean: Dict[str, str]
@@ -58,12 +47,14 @@ def sub_to_opinion_to_sql(
     ):
     """ opinion mine on comments and insert to sqlite db 
     """
-    # comments = submission_clean['document']['comments']
-    # sub_opinions_infos = []
     sub = submission_clean['document']
     comments = sub['comments']
 
-    movie_info = ([sub['title'], sub['score'], sub['permalink']])
+    movie_title = sub['title'].split('-')[1].strip()
+    if ' [spoilers]' in movie_title:
+        movie_title = movie_title[:-11]
+    print(f'movie title:{movie_title}:')
+    movie_info = ([movie_title, sub['score'], sub['permalink']])
     comment_infos = []
 
     for comment in comments:

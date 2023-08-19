@@ -1,7 +1,12 @@
-def date_trimmer(date_string):
+from datetime import datetime, timedelta
+
+
+def date_trimmer(date_utc):
     """
     Friday, August 04, 2023 03:49:39
     """
+    date_string = datetime.fromtimestamp(date_utc).strftime("%A, %B %d, %Y %H:%M:%S")
+
     splits= date_string.split(' ')
     number = splits[3]+'-'
 
@@ -33,3 +38,17 @@ def date_trimmer(date_string):
     number = number + '-' + splits[2].rstrip(',')
     return number 
     
+
+def sort_and_pad_dates(dates):
+    sorted_dates = sorted(dates, key=lambda date: tuple(map(int, date.split('-'))))
+    start_date = datetime.strptime(sorted_dates[0], '%Y-%m-%d')
+    end_date = datetime.strptime(sorted_dates[-1], '%Y-%m-%d')
+
+    padded_dates = []
+    current_date = start_date
+
+    while current_date <= end_date:
+        padded_dates.append(current_date.strftime('%Y-%m-%d'))
+        current_date += timedelta(days=1)
+
+    return padded_dates

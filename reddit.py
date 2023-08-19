@@ -1,18 +1,12 @@
 from helper.reddit_cleanup import submission_cleanup
 import operator 
 
-import pprint
-
-pp = pprint.PrettyPrinter(indent=2)
-
 
 flair = 'Official Discussion'
 filter_text = 'Megathread'
 
 def get_comments(submission):
     top_level_comments = list(submission.comments)
-    # all_comments = submission.comments.list()
-    print(f'top level comments: {top_level_comments}')
 
 
 def subreddit_flaired_retrieve_k(subreddit, flair, collect_num):
@@ -33,7 +27,6 @@ def reddit_retrieve_k(subreddit, order_type, k):
     submission_getter = type_getter(subreddit)
 
     for submission in submission_getter(limit=k):
-        counter += 1
         if submission.link_flair_text == flair and filter_text not in submission.title:
             submission_clean = submission_cleanup(submission)
             yield submission_clean

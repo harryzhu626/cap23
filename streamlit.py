@@ -1,23 +1,36 @@
 import streamlit as st
-from pipelines import pipeline3
+from db.sqlite_new import sql_query_join, sql_query_entities
+from visualize import congregate_data, visualize_for_date
 
 st.title("Movie Opinion Mining")
 st.snow()
 
-def visualize_opinions(movie_name):
-    # Your visualization logic here
-    pipeline3(movie_name=movie_name)
+def visualize_opinions(selected_movies):
+    for movie_name in selected_movies:
+        sql_output = sql_query_join(movie_name=movie_name)
+        opinions = congregate_data(sql_output)
+        plot = visualize_for_date(movie_name, opinions)
+        st.pyplot(plot) 
 
 def display_movies_checkbox():
     pass
 
 def main():
 
-    # Input string from the user
-    movie_name = st.text_input("Enter a movie title:")
+    st.write('SELECT MOVIES TO VISUALIZE')
+    searchable_movies = sql_query_entities()
+
+    selected_movies = []
+
+    for option in searchable_movies:
+        selected = st.checkbox(option[0])
+        if selected:
+            selected_movies.append(option[0])
+
 
     if st.button("Visualize"):
-        visualize_opinions(movie_name)
+        visualize_opinions(selected_movies=selected_movies)
+    
 
 if __name__ == "__main__":
     main()
