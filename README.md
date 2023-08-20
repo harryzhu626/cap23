@@ -1,13 +1,18 @@
 # capstone: opinion mining movies on reddit
 
+### Register a reddit account
+
 ### Docker image and container
-To create a Docker image of this Streamlit app, use the `Dockerfile`. To do this, make sure Docker is installed, and then `cd` into this directory (`cap23/`) and run the following command:
-```bash
-$ docker build --tag cap23 .   
+
+download the repo. make sure you have docker desktop downloaded and opened. in terminal, cd to the cap23 directory and run the following command to build docker image from dockerfile:
+
+```sh
+docker build --tag cap .   
 ```
-Then, to run the Docker container using this image, run the following command: 
-```bash
-$ docker run -dp 8501:8501 cap23
+
+After the image finishes building, run this command to run docker image in a container: 
+
+```sh
+docker run -dp 5000:5000 cap
 ```
-You can then access the Streamlit app at [http://localhost:8501](http://localhost:8501/).
-Note: if you're running the server from Docker and are using the "upload" button to upload a .txt file, this .txt file has to be in the Docker container.
+Go to http://127.0.0.1:5000/. the streamlit app will be running. 
