@@ -1,10 +1,11 @@
 # capstone: opinion mining movies on reddit
 
 ### Register a reddit account
+download the repo. log into your reddit account (register for one if you don't). 
 
 ### Docker image and container
 
-download the repo. make sure you have docker desktop downloaded and opened. in terminal, cd to the cap23 directory and run the following command to build docker image from dockerfile:
+make sure you have docker desktop downloaded and opened. in terminal, cd to the cap23 directory and run the following command to build docker image from dockerfile:
 
 ```sh
 docker build --tag cap .   
