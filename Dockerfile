@@ -1,19 +1,16 @@
-FROM python:3.8
+FROM python:3.11
 
-# Set the working directory in the container
+# Set the working directory
 WORKDIR /cap23
 
-# Copy the requirements file into the container at /app
-COPY requirements.txt /cap23/
+# Copy the requirements file into the container
+COPY requirements.txt requirements.txt
 
-# Install any needed packages specified in requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
+# Install requirements.txt
+RUN pip install -r requirements.txt
 
-# Copy the current directory contents into the container at /app
-COPY . /cap23/
+# Copy current directory contents into the container
+COPY . .
 
-# Expose the port that Streamlit runs on
-EXPOSE 5000
-
-# Define the command to run your Streamlit app when the container starts
-CMD ["streamlit", "run", "streamlit.py"]
+# Run streamlit
+CMD ["streamlit", "run", "streamlit.py", "--server.port=8501", "--server.address=0.0.0.0"]

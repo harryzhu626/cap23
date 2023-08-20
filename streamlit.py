@@ -3,14 +3,14 @@ from db.sqlite_new import sql_query_join, sql_query_entities
 from visualize import congregate_data, visualize_for_date
 
 st.title("Movie Opinion Mining")
-st.snow()
+# st.snow()
 
 def visualize_opinions(selected_movies):
     for movie_name in selected_movies:
         sql_output = sql_query_join(movie_name=movie_name)
         opinions = congregate_data(sql_output)
-        plot = visualize_for_date(movie_name, opinions)
-        st.pyplot(plot) 
+        pn_graph = visualize_for_date(movie_name, opinions)
+        st.pyplot(pn_graph) 
 
 def display_movies_checkbox():
     pass

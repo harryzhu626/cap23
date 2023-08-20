@@ -40,6 +40,8 @@ def date_trimmer(date_utc):
     
 
 def sort_and_pad_dates(dates):
+    print("SORT AND PAD ")
+    print("DATES: ", dates)
     sorted_dates = sorted(dates, key=lambda date: tuple(map(int, date.split('-'))))
     start_date = datetime.strptime(sorted_dates[0], '%Y-%m-%d')
     end_date = datetime.strptime(sorted_dates[-1], '%Y-%m-%d')

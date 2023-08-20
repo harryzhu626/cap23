@@ -1,6 +1,7 @@
 import sqlite3
 
-connection = sqlite3.connect('cap')
+sql_db_name = 'cap_new'
+connection = sqlite3.connect(sql_db_name)
 cursor = connection.cursor()
 
 """
@@ -75,7 +76,7 @@ def insert_comment(cursor, comments, movie_id):
 
 
 def sql_insert(movie, comments):
-    connection_insert = sqlite3.connect('cap23')
+    connection_insert = sqlite3.connect(sql_db_name)
     cursor = connection_insert.cursor()
 
     cursor.execute(insert_query_movie, movie)
@@ -90,7 +91,7 @@ def sql_insert(movie, comments):
 
 
 def sql_query_k(columns, table_name, query_size_k):
-    connection_q = sqlite3.connect('cap23')
+    connection_q = sqlite3.connect(sql_db_name)
     cursor = connection_q.cursor()
 
     query_string = f"SELECT {columns} FROM {table_name} LIMIT {query_size_k};"
@@ -102,7 +103,7 @@ def sql_query_k(columns, table_name, query_size_k):
 
 
 def sql_query_entities():
-    connection_q = sqlite3.connect('cap23')
+    connection_q = sqlite3.connect(sql_db_name)
     cursor = connection_q.cursor()
     query_entities = """
         SELECT title 
@@ -114,11 +115,11 @@ def sql_query_entities():
 
 
 def sql_query_join(movie_name):
-    connection_q = sqlite3.connect('cap23')
+    connection_q = sqlite3.connect(sql_db_name)
     cursor = connection_q.cursor()
 
     query_join_string = f"""
-        SELECT sentences.opinion, comments.date
+        SELECT sentences.opinion, comments.date, comments.score
         FROM sentences
         INNER JOIN comments ON sentences.comment_id = comments.rowid
         INNER JOIN movies ON comments.movie_id = movies.rowid

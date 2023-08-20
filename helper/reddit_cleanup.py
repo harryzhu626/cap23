@@ -1,5 +1,5 @@
 import praw
-from datehelper import date_trimmer
+from helper.datehelper import date_trimmer
 
 def comment_cleanup(comments):
 

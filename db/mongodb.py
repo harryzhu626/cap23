@@ -14,7 +14,7 @@ client = pymongo.MongoClient(
 db = client['cap_db']
 
 # db_reddit_raw = db['reddit_raw']
-db_reddit_clean = db['reddit']
+db_reddit_clean = db['reddit_new']
 
 # raw_id = 0      # keeps track of number of raw documents stored in db_reddit_raw
 clean_id = 0    # keeps track of number of clean documents stored in db_reddit_clean 
@@ -55,9 +55,3 @@ def mongo_remove():
         if "megathread" in entry['document']["title"]:
             db_reddit_clean.delete_one({"_id": entry["_id"]})
             deleted_count += 1
-
-    # result = db_reddit_clean.delete_many(query)
-    # print(f"Deleted {result.deleted_count} documents with 'megathread' in the title.")
-    print(f"Deleted {deleted_count} documents with 'megathread' in the title from the last 30 entries.")
-
-    client.close()

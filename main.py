@@ -15,14 +15,10 @@ flair_text = 'Official Discussion'
 # stock market opinion on reddit vs stock price 
 
 reddit_directory = '/data/reddit/'
-collect_num = 3
-opinionmine_num = 3
-sortby = 'hot' # submission types: controversial, gilded, hot, new, rising, top 
-
-table_name = 'sentences'
-columns = 'comment_id, content, opinion, aspect'
-query_size = 5
+collect_num = 0
+opinionmine_num = 0
+# submission types: controversial, gilded, hot, new, rising, top 
 
 if __name__ == "__main__":
-    pipeline1(subreddit, flair_text, collect_num)
+    #pipeline1(subreddit, flair_text, collect_num)
     pipeline2(opinionmine_num)

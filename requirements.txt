@@ -1,1 +1,7 @@
-python==3.10.9
+python==3.9
+matplotlib==3.7.2
+praw==7.7.1
+pymongo==4.4.1
+streamlit==1.25.0
+torch==2.0.1
+transformers==4.31.0
