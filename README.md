@@ -1,7 +1,7 @@
 # capstone: opinion mining movies on reddit
 
 ### Register a reddit account
-download the repo. log into your reddit account (register for one if you don't). 
+to make the reddit submission extraction pipeline work, you need user_agent, client_id, client_secret from your reddit account. register for one if you don't already have one. here's the official guide https://github.com/reddit-archive/reddit/wiki/OAuth2-Quick-Start-Example#first-steps  
 
 ### Docker image and container
 
