@@ -12,15 +12,9 @@ client = pymongo.MongoClient(
     'localhost', 27017
 )
 db = client['cap_db']
-
-# db_reddit_raw = db['reddit_raw']
 db_reddit_clean = db['reddit_new']
 
-# raw_id = 0      # keeps track of number of raw documents stored in db_reddit_raw
-clean_id = 0    # keeps track of number of clean documents stored in db_reddit_clean 
-
-# raw_id_retrieved = 0    # keeps track of number of raw documents retrieved from db_reddit_raw
-clean_id_retrieved = 0  # keeps track of number of clean documents retrieved from db_reddit_clean 
+clean_id = 0    # keeps track of number of documents stored in db_reddit_clean 
 
 def mongo_single_insert(db_col, doc_id, document) -> None:
     """
@@ -51,7 +45,6 @@ def mongo_remove():
     # Delete matching entries from the last 30 entries
     deleted_count = 0
     for entry in last_30_entries:
-        print('title: ', entry['document']['title'])
         if "megathread" in entry['document']["title"]:
             db_reddit_clean.delete_one({"_id": entry["_id"]})
             deleted_count += 1

@@ -15,10 +15,10 @@ flair_text = 'Official Discussion'
 # stock market opinion on reddit vs stock price 
 
 reddit_directory = '/data/reddit/'
-collect_num = 0
-opinionmine_num = 0
+collect_num = 2
+opinionmine_num = 2
 # submission types: controversial, gilded, hot, new, rising, top 
 
 if __name__ == "__main__":
     #pipeline1(subreddit, flair_text, collect_num)
-    pipeline2(opinionmine_num)
+    #pipeline2(opinionmine_num)
