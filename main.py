@@ -1,6 +1,6 @@
 from pipelines import pipeline1, pipeline2
 import praw 
-from keys.reddit_keys import reddit_agent, reddit_id, reddit_secret
+from keys import reddit_agent, reddit_id, reddit_secret
 
 # create a read-only reddit instance，i.e. only access public information 
 reddit = praw.Reddit(
