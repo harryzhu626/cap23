@@ -1,5 +1,5 @@
 import streamlit as st
-from db.sqlite_new import sql_query_join, sql_query_entities
+from db.sqlite import sql_query_join, sql_query_entities
 from visualize import congregate_data, visualize_for_date
 
 st.title("Movie Opinion Mining")

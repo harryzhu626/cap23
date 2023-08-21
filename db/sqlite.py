@@ -63,6 +63,7 @@ cursor.execute(sentence_schema)
 
 def insert_comment(cursor, comments, movie_id):
     """
+    
     """
     for comment, sentences in comments:
         cursor.execute(insert_query_comment, (movie_id, comment[0], comment[1], comment[2], comment[3]))
