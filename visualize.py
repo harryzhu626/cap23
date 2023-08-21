@@ -8,7 +8,7 @@ def congregate_data(opinions):
     overall = defaultdict(int)
     dates = []
 
-    for opinion, date, score in opinions:
+    for opinion, date, _ in opinions:
         dates.append(date)
         if opinion == 'POSITIVE':
             positive_counts[date] += 1
@@ -62,6 +62,4 @@ def visualize_for_date(movie_title, opinions):
     pn_graph.legend()
 
     pn_graph.tight_layout()
-
-
     return pn_graph

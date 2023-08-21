@@ -5,14 +5,10 @@ import operator
 flair = 'Official Discussion'
 filter_text = 'Megathread'
 
-def get_comments(submission):
-    top_level_comments = list(submission.comments)
-
 
 def subreddit_flaired_retrieve_k(subreddit, flair, collect_num):
     submissions_flaired = subreddit.search(
         query=f'flair_text: "{flair}"',
-        #query=f'NOT title: Official Discussion ',
         sort='new', 
         limit=collect_num
     )
@@ -22,7 +18,6 @@ def subreddit_flaired_retrieve_k(subreddit, flair, collect_num):
 
 
 def reddit_retrieve_k(subreddit, order_type, k):
-    # subreddit has submission instances: controversial, gilded, hot, new, rising, top 
     type_getter = operator.attrgetter(order_type)
     submission_getter = type_getter(subreddit)
 

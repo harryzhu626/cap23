@@ -2,8 +2,7 @@ import streamlit as st
 from db.sqlite import sql_query_join, sql_query_entities
 from visualize import congregate_data, visualize_for_date
 
-st.title("Movie Opinion Mining")
-# st.snow()
+st.title("Reddit Movie Opinion Visualization")
 
 def visualize_opinions(selected_movies):
     for movie_name in selected_movies:
@@ -12,8 +11,6 @@ def visualize_opinions(selected_movies):
         pn_graph = visualize_for_date(movie_name, opinions)
         st.pyplot(pn_graph) 
 
-def display_movies_checkbox():
-    pass
 
 def main():
 

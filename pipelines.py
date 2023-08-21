@@ -20,6 +20,7 @@ def pipeline1(
 from db.mongodb import mongo_query_k
 from opinionmine import opinion_mine_subs
 
+
 def pipeline2(
         retrieve_num: int
     ) -> None:
