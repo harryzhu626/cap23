@@ -1,2 +1,2 @@
-sql_name = 'cap_new'
-mongo_name = 'reddit_new'
+sql_name = 'cap_test'
+mongo_name = 'reddit_test'
