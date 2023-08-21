@@ -1,24 +1,22 @@
 from pipelines import pipeline1, pipeline2
 import praw 
-from keys import reddit_agent, reddit_id, reddit_secret
+from keys import user_agent, client_id, client_secret
 
-# create a read-only reddit instance，i.e. only access public information 
+# Create a read-only reddit instance，i.e. only access public information 
 reddit = praw.Reddit(
-    client_id=reddit_id,
-    client_secret=reddit_secret,
-    user_agent=reddit_agent,
+    client_id=client_id,
+    client_secret=client_secret,
+    user_agent=user_agent,
 )
 
-# obtain a subreddit
+# Obtain the r/movies subreddit. 
 subreddit = reddit.subreddit("movies")
+# Only submissions with this flair contains official movies discussions
 flair_text = 'Official Discussion'
-# stock market opinion on reddit vs stock price 
 
-reddit_directory = '/data/reddit/'
-collect_num = 2
-opinionmine_num = 2
-# submission types: controversial, gilded, hot, new, rising, top 
+collect_num = 2 # how many submission to collect from reddit 
+opinionmine_num = 1 # how many stored submission to opinion mine
 
 if __name__ == "__main__":
-    #pipeline1(subreddit, flair_text, collect_num)
-    #pipeline2(opinionmine_num)
+    pipeline1(subreddit, flair_text, collect_num)
+    pipeline2(opinionmine_num)

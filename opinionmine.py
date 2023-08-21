@@ -1,6 +1,6 @@
 from model.model import sa_pipe
 from typing import Dict
-from db.sqlite_new import sql_insert
+from db.sqlite import sql_insert
 from helper.tokenizer import split_into_sentences
 
 def sentiment_analyze(

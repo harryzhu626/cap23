@@ -1,18 +1,37 @@
-import numpy as np
+import praw
+import datetime
 
-def log_normalize(data):
-    min_val = min(data)
-    normalized_data = [(np.log(x) - np.log(min_val + 1)) for x in data]  # Adding 1 to avoid log(0)
-    return normalized_data
+from keys import user_agent, client_id, client_secret
 
-# Sample data
-y_values_list1 = [-100, 50, 0, 75, 100]
-y_values_list2 = [1000, -200, 0, -500, 800]
 
-# Log-normalize the data
-log_normalized_list1 = log_normalize(y_values_list1)
-log_normalized_list2 = log_normalize(y_values_list2)
+# create a read-only reddit instance，i.e. only access public information 
+reddit = praw.Reddit(
+    client_id=client_id,
+    client_secret=client_secret,
+    user_agent=user_agent,
+)
 
-# Print the log-normalized lists
-print("Log-Normalized List 1:", log_normalized_list1)
-print("Log-Normalized List 2:", log_normalized_list2)
+# Obtain the r/movies subreddit. 
+subreddit = reddit.subreddit("movies")
+# We are only interested in submissions this flair
+flair_text = 'Official Discussion'
+
+# Define the date range
+start_date = datetime.datetime(2023, 7, 20)
+end_date = datetime.datetime(2023, 7, 21)
+
+# Search for submissions within the date range
+search_results = subreddit.search(
+    query='',  # You can specify keywords here if needed
+    sort='new',  # Sort by new submissions
+    time_filter='day',  # Limit the search to the past month
+    after=start_date.timestamp(),
+    before=end_date.timestamp()
+)
+
+# Loop through the search results
+for submission in search_results:
+    print(f"Title: {submission.title}")
+    print(f"URL: {submission.url}")
+    print(f"Created at: {datetime.datetime.fromtimestamp(submission.created_utc)}")
+    print("---")

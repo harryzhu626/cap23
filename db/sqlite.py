@@ -1,23 +1,10 @@
 import sqlite3
+from variables import sql_name
 
-sql_db_name = 'cap_new'
-connection = sqlite3.connect(sql_db_name)
+connection = sqlite3.connect(sql_name)
 cursor = connection.cursor()
 
-"""
-table_movies
-id  title   score   ratio   link                       
-m1  Mady    100     0.9     reddit.com/r/movies/fjdfd  
-
-table_comments
-id      content         score   date    link                            movie
-c1      'good. not bad' 10      1/2/23  reddit.com/r/movies/fjdfd/dkfd  m1
-
-table_sentences
-id      content     opinion     aspect  comment
-s1      'good'      'positive'          c1
-"""
-
+# sqlite schema for movies table
 submission_schema = '''
     CREATE TABLE IF NOT EXISTS movies (
         id INTEGER PRIMARY KEY,
@@ -27,6 +14,7 @@ submission_schema = '''
     );
 '''
 
+# sqlite schema for comments table
 comment_schema = '''
     CREATE TABLE IF NOT EXISTS comments (
         id INTEGER PRIMARY KEY,
@@ -39,6 +27,7 @@ comment_schema = '''
     );
 '''
 
+# sqlite schema for comment-sentences table
 sentence_schema = '''
     CREATE TABLE IF NOT EXISTS sentences (
         id INTEGER PRIMARY KEY,
@@ -50,24 +39,31 @@ sentence_schema = '''
     );
 '''
 
+# sqlite insertion command for movies table
 insert_query_movie = "INSERT INTO movies \
         (title, score, link) \
         VALUES (?, ?, ?)"
 
+# sqlite insertion command for comments table
 insert_query_comment = "INSERT INTO comments \
         (movie_id, content, score, date, link) \
         VALUES (?, ?, ?, ?, ?)"
 
+# sqlite insertion command for comment-sentences table
 insert_query_sentence = "INSERT INTO sentences \
         (comment_id, content, opinion, aspect) \
         VALUES (?, ?, ?, ?)"
 
+# creating sqlite tables for movies, comments, and comment-sentences
 cursor.execute(submission_schema)
 cursor.execute(comment_schema)
 cursor.execute(sentence_schema)
 
+
+
 def insert_comment(cursor, comments, movie_id):
-    print('movie id: ', movie_id)
+    """
+    """
     for comment, sentences in comments:
         cursor.execute(insert_query_comment, (movie_id, comment[0], comment[1], comment[2], comment[3]))
         comment_id = cursor.lastrowid
@@ -76,7 +72,7 @@ def insert_comment(cursor, comments, movie_id):
 
 
 def sql_insert(movie, comments):
-    connection_insert = sqlite3.connect(sql_db_name)
+    connection_insert = sqlite3.connect(sql_name)
     cursor = connection_insert.cursor()
 
     cursor.execute(insert_query_movie, movie)
@@ -91,7 +87,7 @@ def sql_insert(movie, comments):
 
 
 def sql_query_k(columns, table_name, query_size_k):
-    connection_q = sqlite3.connect(sql_db_name)
+    connection_q = sqlite3.connect(sql_name)
     cursor = connection_q.cursor()
 
     query_string = f"SELECT {columns} FROM {table_name} LIMIT {query_size_k};"
@@ -103,7 +99,7 @@ def sql_query_k(columns, table_name, query_size_k):
 
 
 def sql_query_entities():
-    connection_q = sqlite3.connect(sql_db_name)
+    connection_q = sqlite3.connect(sql_name)
     cursor = connection_q.cursor()
     query_entities = """
         SELECT title 
@@ -115,7 +111,7 @@ def sql_query_entities():
 
 
 def sql_query_join(movie_name):
-    connection_q = sqlite3.connect(sql_db_name)
+    connection_q = sqlite3.connect(sql_name)
     cursor = connection_q.cursor()
 
     query_join_string = f"""

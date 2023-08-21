@@ -6,13 +6,14 @@ author: harry z
 
 import pymongo 
 from typing import Iterable
+from variables import mongo_name
 
 # connect to mongodb server running on local host
 client = pymongo.MongoClient(
     'localhost', 27017
 )
 db = client['cap_db']
-db_reddit_clean = db['reddit_new']
+db_reddit_clean = db[mongo_name]
 
 clean_id = 0    # keeps track of number of documents stored in db_reddit_clean 
 
